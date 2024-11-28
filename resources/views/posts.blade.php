@@ -36,13 +36,13 @@
                                             View
                                         </a>
 
-                                        {{-- @can('update', $post) --}}
+                                        @can('update', $post)
                                             <a href="posts/{{ $post['id'] }}/edit" class="focus:outline-none text-white bg-green-800 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2">
                                                 Edit
                                             </a>
-                                        {{-- @endcan --}}
+                                        @endcan
 
-                                        {{-- @can('delete', $post) --}}
+                                        @can('delete', $post)
                                             <form action="posts/{{ $post['id'] }}" method="POST">
                                                 @method('delete')
                                                 @csrf
@@ -50,7 +50,7 @@
                                                     Delete
                                                 </button>
                                             </form>
-                                        {{-- @endcan --}}
+                                        @endcan
                                     </td>
                                 </tr>
                             @endforeach
